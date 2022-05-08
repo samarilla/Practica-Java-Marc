@@ -18,13 +18,6 @@ public class Institut {
         this.personas.add(persona);
     }
 
-    public void afegirProfe(Professor professor) {
-        this.personas.add(professor);
-    }
-
-    public void afegirEstudiant(Estudiant estudiant) {
-        this.personas.add(estudiant);
-    }
 
     public void afegirProfessor(Professor professor) {
         this.professors.add(professor);
