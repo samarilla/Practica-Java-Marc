@@ -1,3 +1,4 @@
+import java.util.Calendar;
 import java.util.Date;
 
 public class Main {
@@ -5,16 +6,20 @@ public class Main {
         Institut ins = new Institut();
         ins.canviarNom("La Guineueta");
 
+        Date dataInici = null;
         Professor profe1 = new Professor();
         profe1.canviarNom("Marc");
         profe1.assignarDni("1234");
+        profe1.canviarSou(2500.0F);
         ins.afegirPersona(profe1);
 
         ProfessorSubstitut profe2 = new ProfessorSubstitut();
         profe2.canviarNom("Laura");
         profe2.assignarDni("8888");
-        Date dataInici = new Date(2021, 11, 1);
-        Date dataFi = new Date(2022, 6, 30);
+        profe2.canviarSou(2500.0F);
+        dataInici = new Date(2021, Calendar.DECEMBER, 1);
+        Date dataFi = new Date(2022, Calendar.JULY, 30);
+        //error en fechas, no he podido solucionarlo, no me ha dado tiempo :(//
         profe2.assignarSubstitucio(dataInici, dataFi);
         ins.afegirPersona(profe2);
 
@@ -29,9 +34,9 @@ public class Main {
         estudiant1.posarNota(7F);
 
         ////////////////Muestra las notas minima, media y maxima en float del estudiant1//////////////
-        System.out.printf("Nota minima: "+(estudiant1.getMinima())+ " ");
-        System.out.printf("Nota media: "+(estudiant1.getMitjana())+ " ");
-        System.out.printf("Nota Maxima: "+(estudiant1.getMaxima())+ " ");
+        System.out.println("Nota minima de " + estudiant1.getNom() + " " + (estudiant1.getMinima()));
+        System.out.println("Nota media de " + estudiant1.getNom() + " " + (estudiant1.getMitjana()));
+        System.out.println("Nota Maxima de " + estudiant1.getNom() + " " + (estudiant1.getMaxima()));
 
 
         ins.afegirPersona(estudiant1);

@@ -10,6 +10,8 @@ public class ProfessorSubstitut extends Professor {
         this.dataFi = dataFi;
     }
 
+
+
     @Override
     public String obtenirDades() throws Exception{
         if (this.getDni() == null) throw new Exception("Esta persona no tiene DNI.");

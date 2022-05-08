@@ -11,8 +11,8 @@ public class Professor extends Persona{
         if (sou < 0) throw new Exception("el sueldo no admite numeros en negativos");
         this.sou = sou;
     }
-    
-    
+
+
 
     public float getSou() {
         return sou;
